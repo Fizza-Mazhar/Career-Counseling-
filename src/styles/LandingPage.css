@@ -1,0 +1,156 @@
+/* LandingPage.css */
+.intro {
+  padding: 50px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.intro h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+/* Apply to the image */
+img {
+  padding-top: 0.1%;
+  width: 100%; /* Set width to 100% of the screen width */
+  height: 80vh; /* Set height to 50% of the viewport height */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+  display: block; /* Remove any unwanted space below the image */
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+.quote-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.5); /* Blue overlay */
+  z-index: 0;
+}
+
+/* Styling the container to use Flexbox */
+.container {
+  display: flex;
+  align-items: center;  /* Centers content vertically */
+  justify-content: space-between;  /* Adds space between image and text */
+  height: 85vh;  /* Full viewport height */
+  padding: 0.1px;
+}
+
+.left-side {
+  flex: 0.6;
+  padding-right: 0px;
+  padding-left: 0px;  /* Adds space between image and text */
+}
+
+.image {
+  width: 100%;  /* Makes the image responsive */
+  height: auto;  /* Maintains aspect ratio */
+  border-radius: 3px;  /* Optional: Adds rounded corners */
+}
+
+.right-side {
+  flex: 1;
+  padding-left: 5px;  /* Adds space between text and image */
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;  
+  justify-content: center;  /* Centers the text vertically */
+}
+
+.left-side2 {
+  flex: 0.6;
+  padding-right: 0px;
+  padding-left: 0px;  /* Adds space between image and text */
+}
+
+.image {
+  width: 100%;  /* Makes the image responsive */
+  height: auto;  /* Maintains aspect ratio */
+  border-radius: 3px;  /* Optional: Adds rounded corners */
+}
+
+.right-side2 {
+  flex: 1;
+  padding-left: 5px;  /* Adds space between text and image */
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;  
+  justify-content: center;  /* Centers the text vertically */
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.sky-blue-container {
+  background-color:  #119fc2; /* Sky blue color */
+  width: 100%; /* You can adjust the width as needed */
+  height: 150%; /* You can adjust the height as needed */
+  padding: 20px; /* Add padding inside the container */
+  box-sizing: border-box; /* Ensures padding is included in the width/height */
+}
+
+/* New styles for the trust section */
+.trust-section {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 20px; /* Space above the section */
+}
+
+.trust-section h2 {
+  color: #ffffff; /* Dark text color */
+  font-size: 1.8rem; /* Slightly smaller than h1 */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.trust-section ul {
+  list-style-type: disc; /* Bullet points */
+  padding-left: 20px; /* Indent the list */
+}
+
+.trust-section li {
+  color: #ffffff; /* Text color for list items */
+  font-size: 1.2rem; /* Font size for list items */
+  margin-bottom: 5px; /* Space between list items */
+}

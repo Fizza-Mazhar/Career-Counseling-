@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+ 
+  color: white;}
+
+
+
+/* Make the logo round and small */
+.logo img {
+  width: 30px; /* Adjust the size as needed */
+  height: 30px; /* Ensure width and height are the same for a round shape */
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image is cropped properly inside the circle */
+  border: 2px solid #ccc; /* Optional: Add a border */
+}
+
+/* Responsive logo size */
+@media (max-width: 768px) {
+  .logo img {
+    width: 30px; /* Smaller logo on mobile devices */
+    height: 30px;
+    object-fit: cover; 
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Corrected from 'left' to 'flex-start' */
+  padding: 0.5rem 1rem;
+  
+  color: white;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Toggle button for mobile view */
+.navbar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar-links {
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+    background-color: teal; /* Match navbar background */
+    position: absolute; /* Position below the navbar */
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+  }
+
+  .navbar-links.show {
+    display: flex; /* Show links when toggle is active */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show toggle button */
+  }
+}
+
+.navbar-links a,
+.dropdown-toggle {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background-color: lightgray;
+}
+
+.contact-info {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: flex-end; /* Align the buttons to the right */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Add space between buttons */
+  margin-left: auto; /* Push the contact-info section to the right */
+  padding-right: 10px; /* Optional: Add a bit of spacing from the edge */
+}
+
+/* Ensure buttons are responsive */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    align-items: flex-end; /* Align buttons to the right */
+    gap: 5px; /* Reduce space between buttons for smaller screens */
+  }
+
+  .contact-info button {
+    font-size: 12px; /* Adjust button font size for smaller screens */
+    padding: 4px 8px;
+     background-color: teal; /* Adjust padding for smaller buttons */
+  }
+}
+
+/* Style for individual buttons (e.g., LOGIN button) */
+.contact-info button {
+  background-color: teal;
+
+  color: #ffffff;
+  border: 1px solid #007f82; /* Optional border */
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .signup-btn {
+    font-size: 0.9rem; /* Slightly smaller text on tablets or smaller screens */
+    padding: 0.2rem 0.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-btn {
+    font-size: 0.8rem; /* Further reduce font size on very small screens */
+    padding: 0.1rem 0.4rem; /* Further adjust padding for smaller screens */
+  }
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.login-btn {
+  background-color: white;
+  color: teal;
+  border: 1px solid white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.signup-btn {
+  background-color: white;
+  color: teal;
+  border: 1px solid white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem; /* Default font size */
+}
+
+.signup-btn:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .dashboard h1 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard p {
+    font-size: 1rem;
+  }
+}
+
+.navbar-top {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: flex-start; /* Align all items to the left */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Optional: Add spacing between items */
+  padding: 10px 20px; /* Optional: Adjust padding */
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: teal;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
